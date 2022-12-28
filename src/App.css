@@ -1,0 +1,81 @@
+
+
+body{
+  background-color: rgb(4, 4, 23);
+  color: white;
+  font-family: sans-serif;
+}
+
+header{
+  border-bottom: 1px solid white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .actions{
+  display: flex;
+  gap: 2rem;
+}
+
+#page{
+  height: calc(100vh - 70px);
+  max-width: 100%;
+  background-color: rgb(4, 4, 23);
+  overflow-y: hidden;
+}
+
+@keyframes surgir {
+  0%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+.circle{
+  width: 2rem;
+  height: 2rem;
+  background-color: orange;
+  border-radius: 50%;
+  position: absolute;
+
+  animation: surgir .2s ease-in-out;
+}
+
+.actions button{
+  border: 0;
+  padding: 8px 10px;
+  border-radius: 2px;
+
+  cursor: pointer;
+}
+
+@media (max-width:430px) {
+  main{
+    display: flex;
+    min-height: 100vh;
+    height: auto;
+  }
+
+  header{
+    flex-direction: column;
+    width: 6rem ;
+    min-height: 100%;
+    justify-content: flex-start;
+    gap: 2rem;
+    border-bottom: 0;
+    border-right: 2px solid rgba(255, 255, 255, 0.363);
+  }
+
+  header .actions{
+    flex-direction: column;
+  }
+
+  #page{
+    width: 100%;
+    min-height: 100%;
+  }
+}
